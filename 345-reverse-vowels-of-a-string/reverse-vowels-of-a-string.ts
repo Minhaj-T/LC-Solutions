@@ -1,4 +1,5 @@
 function reverseVowels(s: string): string {
+    //solution
     let answer = "";
     let vowelsIdx = [];
     const vowels = 'AEIOUaeiou'
