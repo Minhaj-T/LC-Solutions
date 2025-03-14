@@ -1,5 +1,4 @@
 function reverseVowels(s: string): string {
-    //solution
     let answer = "";
     let vowelsIdx = [];
     const vowels = 'AEIOUaeiou'
@@ -8,9 +7,9 @@ function reverseVowels(s: string): string {
         if (vowels.includes(s[i])) vowelsIdx.push(i);
     }
 
-    for (let i = 0; i < s.length; i++){
-        if(vowels.includes(s[i])) answer += s[vowelsIdx.pop() || 0];
-        else answer +=s[i]
+    for (let i = 0; i < s.length; i++) {
+        if (vowels.includes(s[i])) answer += s[vowelsIdx.pop() || 0];
+        else answer += s[i]
     }
 
     return answer;
