@@ -11,7 +11,7 @@ var merge = function (nums1, m, nums2, n) {
     let p2 = 0;
 
     for (let i = 0; i < m + n; i++) {
-        if (p2 === n || (nums1Copy[p1] < nums2[p2] && p1 < m)) {
+        if (p2 >= n || (nums1Copy[p1] < nums2[p2] && p1 < m)) {
             nums1[i] = nums1Copy[p1];
             p1++
         } else {
