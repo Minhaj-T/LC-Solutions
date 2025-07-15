@@ -3,11 +3,6 @@
  * @return {number}
  */
 var fib = function (n) {
-    let res = [0, 1]
-
-    for (let i = 2; i < n + 1; i++) {
-        res[i] = res[i - 1] + res[i - 2];
-    }
-    return res[n]
-
+    if (n <= 1) return n;
+    return fib(n - 1) + fib(n - 2)
 };
