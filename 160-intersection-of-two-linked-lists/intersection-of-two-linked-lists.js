@@ -13,15 +13,15 @@
  */
 var getIntersectionNode = function (headA, headB) {
     //set all the headB element in to the hashmap/set
-    let newSet = new Set();
+    let store = new Set();
 
     while (headB) {
-        newSet.add(headB)
+        store.add(headB)
         headB = headB.next
     }
 
     while (headA) {
-        if (newSet.has(headA)) {
+        if (store.has(headA)) {
             return headA
         }
         headA = headA.next
