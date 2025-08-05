@@ -12,14 +12,14 @@
  * @return {ListNode}
  */
 var getIntersectionNode = function (headA, headB) {
-    //set all the headB element in to the hashmap/set
+    //put all nodes of headB inside a set
     let store = new Set();
-
     while (headB) {
         store.add(headB)
         headB = headB.next
     }
 
+// check for each elemet of headA if thay are presend in set
     while (headA) {
         if (store.has(headA)) {
             return headA
