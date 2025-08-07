@@ -6,6 +6,7 @@
  * }
  */
 /**
+ * Two Pass Solution
  * @param {ListNode} head
  * @param {number} n
  * @return {ListNode}
