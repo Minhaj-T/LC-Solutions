@@ -21,19 +21,22 @@ var rotateRight = function (head, k) {
         curr = curr.next;
     }
 
+    // to avoid unnecesary rotations
     k = k % length;
 
     let f = head;
-    //ahead the f pointer
+    //move f pointer k steps ahead.
     for (let i = 0; i < k; i++) {
         f = f.next;
     }
 
     let s = head;
+    // reaching the end of the list
     while (f.next) {
         f = f.next;
         s = s.next;
     }
+
     f.next = head;
     let newHead = s.next;
     s.next = null;
