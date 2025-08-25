@@ -9,21 +9,19 @@ var lengthOfLastWord = function (s) {
 
     // trim all the last spaces at the end.
     while (n >= 0) {
-        if (s[n] == " ") {
-            n--;
-        } else {
+        if (s[n] !== " ") {
             break;
         }
+        n--;
     };
     // n is the word where my last word starts
 
     // count the carecters till you reach a space;
     for (let i = n; i >= 0; i--) {
-        if (s[i] !== " ") {
-            count++;
-        } else {
+        if (s[i] === " ") {
             break;
         }
+        count++;
     }
     return count;
 
