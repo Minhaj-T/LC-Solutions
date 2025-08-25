@@ -19,10 +19,10 @@ var lengthOfLastWord = function (s) {
 
     // count the carecters till you reach a space;
     for (let i = n; i >= 0; i--) {
-        if (s[i] === " ") {
-            break;
-        } else {
+        if (s[i] !== " ") {
             count++;
+        } else {
+            break;
         }
     }
     return count;
