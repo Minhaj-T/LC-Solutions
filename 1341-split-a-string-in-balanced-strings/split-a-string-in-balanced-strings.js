@@ -10,7 +10,6 @@ var balancedStringSplit = function (s) {
         temp = s[i] === "R" ? ++temp : --temp;
 
         if (!temp) {
-            temp = 0;
             count++;
         }
     }
