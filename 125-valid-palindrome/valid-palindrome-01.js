@@ -4,8 +4,7 @@
  */
 var isPalindrome = function (s) {
 
-    //filterd value
-
+    //filtered value
     let filterdString = '';
     s = s.toLowerCase();
     let rev = '';
@@ -17,6 +16,4 @@ var isPalindrome = function (s) {
         }
     }
     return rev === filterdString;
-
-
 };
