@@ -10,5 +10,4 @@ var largestOddNumber = function (s) {
     }
     return "";
 
-
 };
