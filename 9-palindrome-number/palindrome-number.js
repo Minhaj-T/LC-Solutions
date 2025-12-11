@@ -13,6 +13,6 @@ var isPalindrome = function (x) {
         x = Math.floor(x / 10)
     }
 
-    return rev == xCopy;
+    return rev === xCopy;
 
 };
