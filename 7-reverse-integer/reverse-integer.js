@@ -3,19 +3,21 @@
  * @return {number}
  */
 var reverse = function (x) {
-    let rev = 0;
-    let xCopy = x;
+    let xCpy = x;
+    x = Math.abs(x);
 
-    x = Math.abs(x)
+    let rev = 0;
     while (x > 0) {
         let last = x % 10;
-        rev = rev * 10 + last;
-        x = Math.floor(x / 10)
+        rev = (rev * 10) + last;
+        x = Math.floor(x / 10);
     }
 
-    let limit = Math.pow(2, 31)
-    if (rev < -limit || rev > limit) return 0;
+    let limit = 2 ** 31;
 
-    return xCopy < 0 ? -rev : rev;
+    if (rev > limit) return 0;
+
+    return xCpy < 0 ? -rev : rev
+
 
 };
