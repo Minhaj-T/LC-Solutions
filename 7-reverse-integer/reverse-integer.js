@@ -15,7 +15,7 @@ var reverse = function (x) {
 
     let limit = 2 ** 31;
 
-    if (rev > limit) return 0;
+    if (rev< -limit || rev > limit) return 0;
 
     return xCpy < 0 ? -rev : rev
 
