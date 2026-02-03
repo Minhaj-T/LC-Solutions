@@ -2,7 +2,16 @@
  * @param {number} n
  * @return {number}
  */
-var fib = function (n) {
+var fib = function(n) {
     if (n <= 1) return n;
-    return fib(n - 1) + fib(n - 2)
+
+    let prev = 0, curr = 1;
+
+    for (let i = 2; i <= n; i++) {
+        let next = prev + curr;
+        prev = curr;
+        curr = next;
+    }
+
+    return curr;
 };
