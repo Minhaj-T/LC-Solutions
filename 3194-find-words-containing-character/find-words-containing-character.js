@@ -3,11 +3,13 @@
  * @param {character} x
  * @return {number[]}
  */
-var findWordsContaining = function (words, x) {
+var findWordsContaining = function (arr, x) {
+
     let res = [];
-    for (let i = 0; i < words.length; i++) {
-        for (let j = 0; j < words[i].length; j++){
-            if (words[i][j] === x) {
+
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+            if (arr[i][j] == x) {
                 res.push(i);
                 break;
             }
