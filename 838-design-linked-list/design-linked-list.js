@@ -62,7 +62,7 @@ MyLinkedList.prototype.addAtTail = function (val) {
  * @return {void}
  */
 MyLinkedList.prototype.addAtIndex = function (index, val) {
-    if (index < 0 || index > this.size) return; 
+    if (index < 0 || index > this.size) return -1; 
 
     let newNode = new Node(val)
     if (index === 0) {
