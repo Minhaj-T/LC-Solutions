@@ -7,28 +7,29 @@ var maxFreqSum = function (s) {
     let map = {};
 
     for (let i = 0; i < s.length; i++) {
-        map[s[i]] = !map[s[i]] ? 1 : ++map[s[i]];
-    }
-
-    let vowels = ['a', 'e', 'i', 'o', 'u'];
-    let maxVowel = 0;
-    let maxConsonant = 0;
-
-    let mapKeys = Object.keys(map)
-
-    for (let i = 0; i < mapKeys.length; i++) {
-        if (vowels.includes(mapKeys[i])) {
-            if (maxVowel < map[mapKeys[i]]) {
-                maxVowel = map[mapKeys[i]]
-            }
+        if (!map[s[i]]) {
+            map[s[i]] = 1;
         } else {
-            if (maxConsonant < map[mapKeys[i]]) {
-                maxConsonant = map[mapKeys[i]]
-            }
-
+            map[s[i]]++;
         }
     }
 
-    return maxConsonant + maxVowel;
+    let maxVowels = 0, maxConsonent = 0;
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+
+    let mapKeys = Object.keys(map)
+
+    for (let j = 0; j < mapKeys.length; j++) {
+        if (vowels.includes(mapKeys[j])) {
+            if (maxVowels < map[mapKeys[j]]) {
+                maxVowels = map[mapKeys[j]]
+            }
+        } else {
+            if (maxConsonent < map[mapKeys[j]]) {
+                maxConsonent = map[mapKeys[j]];
+            }
+        }
+    }
+    return maxVowels + maxConsonent;
 
 };
