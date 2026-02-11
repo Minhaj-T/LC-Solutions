@@ -2,23 +2,28 @@
  * @param {string} s
  * @return {boolean}
  */
-var isPalindrome = function (s) {
-    let i = 0;
-    let j = s.length - 1;
+ var isPalindrome = function (s) {
+
     s = s.toLowerCase();
-    while (i < j) {
-        if (!s[i].match(/[a-z0-9]/i)) {
-            ++i;
-        } else if (!s[j].match(/[a-z0-9]/i)) {
-            --j;
-        }
-        else if (s[i] === s[j]) {
-            ++i;
-            --j;
+    let l = 0, r = s.length - 1;
+
+    while (l < r) {
+
+        if (!s[l].match(/[a-z0-9]/i)) {
+            ++l;
+
+        } else if (!s[r].match(/[a-z0-9]/i)) {
+            --r;
+
+        } else if (s[l] === s[r]) {
+            ++l;
+            --r;
         } else {
-            return false
+            return false;
         }
+
     }
+
     return true;
 
-};
+}
