@@ -3,10 +3,10 @@
  * @return {number}
  */
 var reverse = function (x) {
-    let xCpy = x;
+    let cpy = x;
     x = Math.abs(x);
-
     let rev = 0;
+
     while (x > 0) {
         let last = x % 10;
         rev = (rev * 10) + last;
@@ -14,6 +14,10 @@ var reverse = function (x) {
     }
 
     let limit = 2 ** 31;
-    if (-limit > rev || limit < rev) return 0
-    return xCpy < 0 ? -rev : rev
+    if (rev > limit || rev < -limit) {
+        return 0;
+    }
+    
+    return cpy < 0 ? -rev : rev
+
 };
