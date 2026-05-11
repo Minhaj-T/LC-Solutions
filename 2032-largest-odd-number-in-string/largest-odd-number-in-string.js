@@ -2,15 +2,13 @@
  * @param {string} num
  * @return {string}
  */
-var largestOddNumber = function (s) {
-
-    for (let i = s.length; i >= 0; i--) {
-
-        if (s[i] % 2 == 1) {
-            return s.substring(0, i + 1)
+var largestOddNumber = function (num) {
+    let n = num.length - 1;
+    for (let i = n; i >= 0; i--) {
+        if (Number(num[i]) % 2 !== 0) {
+            return num.slice(0, i + 1)
         }
 
     }
-    return ""
-
+    return "";
 };
